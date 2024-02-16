@@ -5,9 +5,9 @@ public:
         int maxcnt = 0;
         int cnt = 0;
         
-        for (int i = 0; i < n; i++) 
+        for (auto &i: nums) 
         {
-            if (nums[i] == 1) 
+            if (i == 1) 
             {
                 cnt++;
                 maxcnt = max(cnt, maxcnt);
