@@ -5,11 +5,15 @@ public:
         int maxcnt = 0;
         int cnt = 0;
         
-        for (int i = 0; i < n; i++) {
-            if (nums[i] == 1) {
+        for (int i = 0; i < n; i++) 
+        {
+            if (nums[i] == 1) 
+            {
                 cnt++;
                 maxcnt = max(cnt, maxcnt);
-            } else {
+            } 
+            else 
+            {
                 cnt = 0;
             }
         }
