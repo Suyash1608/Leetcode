@@ -1,21 +1,12 @@
 class Solution {
 public:
     string largestOddNumber(string num) {
-    string out;
-    string possible;
-    for(int i=0;i<num.size();i++)
-    {
-        int x=num[i]-'0';
-        if(x%2==0)
-        {
-            possible+=num[i];
+        for (int i = num.size() - 1; i >= 0; --i) {
+            int x = num[i] - '0';
+            if (x % 2 != 0) {
+                return num.substr(0, i + 1);
+            }
         }
-        else
-        {
-            possible+=num[i];
-            out=possible;
-        }
-    }
-    return out;
+        return "";
     }
 };
